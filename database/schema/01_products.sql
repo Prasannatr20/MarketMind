@@ -1,0 +1,7 @@
+CREATE TABLE products(
+product_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+product_name VARCHAR(150) NOT NULL,
+selling_price NUMERIC(10,2) NOT NULL CHECK(selling_price>0),
+category VARCHAR(100) NOT NULL,
+is_active BOOLEAN DEFAULT TRUE
+);
