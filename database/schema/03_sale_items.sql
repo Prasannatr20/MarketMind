@@ -11,3 +11,13 @@ ALTER TABLE sale_items ALTER quantity SET NOT NULL;
 ALTER TABLE sale_items ALTER product_id SET NOT NULL;
 ALTER TABLE sale_items ALTER sale_id SET NOT NULL;
 ALTER TABLE sale_items ALTER unit_price SET NOT NULL;
+
+
+ALTER TABLE sale_items
+ADD CONSTRAINT fk_constraint_name
+FOREIGN KEY(product_id) REFERENCES products(product_id);
+
+
+ALTER TABLE sale_items
+ADD CONSTRAINT fk_constraint_names
+FOREIGN KEY(sale_id) REFERENCES sales(sale_id);
