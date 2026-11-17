@@ -23,7 +23,10 @@ cursor.execute("""
 
 products = cursor.fetchall()
 
-print(products)
+for product in products:
+    print("Product name:",product[0])
+    print("Price:",product[1])
+    print("------------------")
 
 cursor.close()
 connection.close()
